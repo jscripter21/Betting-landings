@@ -1,0 +1,137 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.section-main__offer {
+    animation: puls 1.1s alternate infinite ease-in;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    z-index: 1;
+
+    img {
+        max-width: 720px;
+        width: 100%;
+    }
+
+    @media (max-width: 550px) {
+        margin-top: 0;
+
+    }
+}
+
+@keyframes puls {
+    100% {
+        transform: scale(1.03);
+    }
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 40px;
+
+    z-index: 1;
+
+    animation: btn 2.5s infinite ease-in;
+
+    @media (max-width: 550px) {
+        width: 300px;
+
+    }
+}
+
+@keyframes btn {
+    0% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(1.05);
+    }
+
+    15% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.icon-wrapper {
+    background-image: url('../img/bg/bg-carusel.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    border-radius: 20px;
+    max-width: 420px;
+    width: 100%;
+    height: 177px;
+    z-index: 1;
+}
+
+@media (max-width: 550px) {
+    .icon-wrapper {
+        max-width: 380px;
+        height: 157px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .icon-wrapper {
+        max-width: 350px;
+        height: 147px;
+    }
+}
+
+.icon {
+    max-width: 40px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon img {
+    width: 100%;
+    max-width: 40px;
+    height: 100%;
+    max-height: 40px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    filter: brightness(1);
+}
+
+.icon.active img {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.text {
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 23px;
+    font-weight: 600;
+    color: #F0FF20;
+    max-width: 250px;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
